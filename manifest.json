@@ -1,0 +1,27 @@
+
+{
+  "manifest_version": 2,
+  "name": "Dynamic Wallpaper",
+  "version": "1.0",
+  "description": "Changes the browser background based on the time of day",
+  "permissions": ["storage", "activeTab"],
+  "browser_action": {
+    "default_icon": {
+      "16": "pngwing.com (1).png",
+      "48": "pngwing.com (4).png",
+      "128": "Signature_50.jpg"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "pngwing.com (1).png",
+    "48": "pngwing.com (4).png",
+    "128": "Signature_50.jpg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
